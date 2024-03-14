@@ -47,7 +47,7 @@ void merger(int pData[], int l, int m, int r)//creates temp arrays for each spli
 	int i = 0;
 	int j = 0;
 	int k = l;
-	while(i < (m-l+1) && j < (r-m))//
+	while(i < (m-l+1) && j < (r-m))//compares values at each split and puts it in the correct place in the main array
 	{
 		if(larray[i] <= rarray[j])
 		{
@@ -62,7 +62,7 @@ void merger(int pData[], int l, int m, int r)//creates temp arrays for each spli
 		k++;
 	}
 
-	while(i < (m-l+1))
+	while(i < (m-l+1)) //fills rest of data in main array
 	{
 		pData[k] = larray[i];
 		i++;
